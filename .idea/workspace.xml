@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2c8cb5-da91-4fbf-b427-ed2f523fb21b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/dunwoody/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dunwoody/Athlete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/dunwoody/Housing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dunwoody/Housing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dunwoody/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dunwoody/Resident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dunwoody/Scholarship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dunwoody/Scholarship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dunwoody/WorkStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dunwoody/WorkStudy.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dunwoody/Housing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,7 +127,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554237970352" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554239241387" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -247,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dunwoody/Housing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

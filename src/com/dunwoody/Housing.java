@@ -1,7 +1,9 @@
 package com.dunwoody;
 
 import javax.swing.*;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Housing {
 
@@ -17,10 +19,14 @@ public class Housing {
 			aList.add(ResidentCreator());
 			run = Continue(count);
 		}
+
 		System.out.println();
-		aList.forEach((n) -> System.out.println("ID Number: " + n.ID_Number + ", " + "Student Type: " + n.studentType + ", " + "First Name: " +
-				n.firstName + ", " + "Last Name: " + n.lastName + ", " + "Floor Number: " + n.floorNumber + ", " + "Room Number: " +
-				n.roomNumber + ", " + "Student Fee" + n.fee));
+		NumberFormat formatter = NumberFormat.getCurrencyInstance();
+		aList.forEach((n) -> System.out.println(String.format("%25s","ID Number: " + n.ID_Number) + " | " +
+				String.format("%20s","Student Type: " + n.studentType)+ " | " + String.format("%25s","First Name: " + n.firstName)+ " | " +
+				String.format("%25s","Last Name: " + n.lastName) + " | " + String.format("%25s","Floor Number: " + n.floorNumber)
+				+ " | " + String.format("%25s","Room Number: " + n.roomNumber) + " | " + String.format("%25s","Student Fee"
+				+ formatter.format(n.fee))));
 		//Numbers.forEach((n) -> System.out.println(n));
 	}
 	public static Resident ResidentCreator(){
