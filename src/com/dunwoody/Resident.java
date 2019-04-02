@@ -1,10 +1,11 @@
 package com.dunwoody;
 
 abstract class Resident {
-    protected String studentType, firstName, lastName;
-    protected int ID_Number, floorNumber, roomNumber;
+    protected String ID_Number, studentType, firstName, lastName;
+    protected int floorNumber, roomNumber;
+    protected double fee;
 
-    public Resident(String TypeStudent, String Fname, String Lname, Integer Floor, Integer Room){
+    public Resident(String TypeStudent, String Fname, String Lname, int Floor, int Room){
         this.studentType = TypeStudent;
         this.firstName = Fname;
         this.lastName = Lname;
