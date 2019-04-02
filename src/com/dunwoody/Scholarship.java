@@ -1,4 +1,4 @@
 package com.dunwoody;
 
-public class Scholarship extends Resident {
-}
+//public class Scholarship extends Resident {
+//}

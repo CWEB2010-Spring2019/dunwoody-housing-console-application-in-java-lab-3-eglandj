@@ -1,4 +1,4 @@
 package com.dunwoody;
 
-public class WorkStudy extends Resident {
-}
+//public class WorkStudy extends Resident {
+//}
