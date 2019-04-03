@@ -22,10 +22,10 @@ public class Housing {
 
 		System.out.println();
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
-		aList.forEach((n) -> System.out.println(String.format("%25s","ID Number: " + n.ID_Number) + " | " +
-				String.format("%20s","Student Type: " + n.studentType)+ " | " + String.format("%25s","First Name: " + n.firstName)+ " | " +
-				String.format("%25s","Last Name: " + n.lastName) + " | " + String.format("%25s","Floor Number: " + n.floorNumber)
-				+ " | " + String.format("%25s","Room Number: " + n.roomNumber) + " | " + String.format("%25s","Student Fee"
+		aList.forEach((n) -> System.out.println(String.format("|%-20s","ID Number: " + n.ID_Number) +
+				String.format("|%-30s","Student Type: " + n.studentType) + String.format("|%-26s","First Name: " + n.firstName) +
+				String.format("|%-26s","Last Name: " + n.lastName) + String.format("|%-26s","Floor Number: " + n.floorNumber)
+				+ String.format("|%-26s","Room Number: " + n.roomNumber) + String.format("|%-26s|","Student Fee: "
 				+ formatter.format(n.fee))));
 		//Numbers.forEach((n) -> System.out.println(n));
 	}
