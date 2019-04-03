@@ -2,8 +2,8 @@ package com.dunwoody;
 
 import javax.swing.*;
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Housing {
 
@@ -19,15 +19,34 @@ public class Housing {
 			aList.add(ResidentCreator());
 			run = Continue(count);
 		}
-
 		System.out.println();
+		//Map<String, List<Student>> studlistGrouped =
+				//studlist.stream().collect(Collectors.groupingBy(w -> w.stud_location));
+		//Map<String, List<Resident>> sortedList =
+				//aList.stream().collect(Collectors.groupingBy(w -> w.studentType));
+		Map<String, List<Resident>> groupedStudents = new HashMap<>();
+		for (Resident student: aList) {
+			String key = student.studentType;
+			if (groupedStudents.get(key) == null) {
+				groupedStudents.put(key, new ArrayList<>());
+			}
+			groupedStudents.get(key).add(student);
+		}
+		Set<String> groupedStudentsKeySet = groupedStudents.keySet();
+		for (String studentType: groupedStudentsKeySet) {
+			List<Resident> stdnts = groupedStudents.get(studentType);
+			for (Resident n : stdnts) {
+
+				System.out.println(n.toString());
+			}
+		}
+		/*System.out.println();
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
 		aList.forEach((n) -> System.out.println(String.format("|%-20s","ID Number: " + n.ID_Number) +
 				String.format("|%-30s","Student Type: " + n.studentType) + String.format("|%-26s","First Name: " + n.firstName) +
 				String.format("|%-26s","Last Name: " + n.lastName) + String.format("|%-26s","Floor Number: " + n.floorNumber)
 				+ String.format("|%-26s","Room Number: " + n.roomNumber) + String.format("|%-26s|","Student Fee: "
-				+ formatter.format(n.fee))));
-		//Numbers.forEach((n) -> System.out.println(n));
+				+ formatter.format(n.fee))));*/
 	}
 	public static Resident ResidentCreator(){
 		Resident newResident;
@@ -45,7 +64,7 @@ public class Housing {
 			int floor = floorOptions[floorSelect];
 			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
-			newResident = new Athlete(studentType,firstName,lastName,floor,room);
+			newResident = new Athlete(firstName,lastName,floor,room);
 		}else if (studentType.equals("Scholarship")){
 			Integer[] floorOptions = {7,8};
 			Integer[] roomOptions = {1,2,3,4,5,6,7,8,9};
@@ -53,7 +72,7 @@ public class Housing {
 			int floor = floorOptions[floorSelect];
 			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
-			newResident = new Scholarship(studentType,firstName,lastName,floor,room);
+			newResident = new Scholarship(firstName,lastName,floor,room);
 		}else if (studentType.equals("Work Study")){
 			Integer[] floorOptions = {1,2,3};
 			Integer[] roomOptions = {1,2,3,4,5,6,7,8,9};
@@ -62,7 +81,7 @@ public class Housing {
 			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
 			double HoursWorked = Double.parseDouble(JOptionPane.showInputDialog(null, "Monthly Hours Worked"));
-			newResident = new WorkStudy(studentType,firstName,lastName,floor,room, HoursWorked);
+			newResident = new WorkStudy(firstName,lastName,floor,room, HoursWorked);
 		}else{
 			newResident = null;
 		}
