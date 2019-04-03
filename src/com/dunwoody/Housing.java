@@ -1,9 +1,7 @@
 package com.dunwoody;
 
 import javax.swing.*;
-import java.text.NumberFormat;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Housing {
 
@@ -20,10 +18,6 @@ public class Housing {
 			run = Continue(count);
 		}
 		System.out.println();
-		//Map<String, List<Student>> studlistGrouped =
-				//studlist.stream().collect(Collectors.groupingBy(w -> w.stud_location));
-		//Map<String, List<Resident>> sortedList =
-				//aList.stream().collect(Collectors.groupingBy(w -> w.studentType));
 		Map<String, List<Resident>> groupedStudents = new HashMap<>();
 		for (Resident student: aList) {
 			String key = student.studentType;
@@ -40,13 +34,6 @@ public class Housing {
 				System.out.println(n.toString());
 			}
 		}
-		/*System.out.println();
-		NumberFormat formatter = NumberFormat.getCurrencyInstance();
-		aList.forEach((n) -> System.out.println(String.format("|%-20s","ID Number: " + n.ID_Number) +
-				String.format("|%-30s","Student Type: " + n.studentType) + String.format("|%-26s","First Name: " + n.firstName) +
-				String.format("|%-26s","Last Name: " + n.lastName) + String.format("|%-26s","Floor Number: " + n.floorNumber)
-				+ String.format("|%-26s","Room Number: " + n.roomNumber) + String.format("|%-26s|","Student Fee: "
-				+ formatter.format(n.fee))));*/
 	}
 	public static Resident ResidentCreator(){
 		Resident newResident;
