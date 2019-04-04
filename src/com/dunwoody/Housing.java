@@ -49,26 +49,29 @@ public class Housing {
 			Integer[] roomOptions = {1,2,3,4,5,6,7,8,9};
 			int floorSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,floorOptions,null);
 			int floor = floorOptions[floorSelect];
-			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
+			int roomSelect = JOptionPane.showOptionDialog(null,"Select a room",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
-			newResident = new Athlete(firstName,lastName,floor,room);
+			int roomNumber = Integer.parseInt(Integer.toString(floor) + Integer.toString(room));
+			newResident = new Athlete(firstName,lastName,floor,roomNumber);
 		}else if (studentType.equals("Scholarship")){
 			Integer[] floorOptions = {7,8};
 			Integer[] roomOptions = {1,2,3,4,5,6,7,8,9};
 			int floorSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,floorOptions,null);
 			int floor = floorOptions[floorSelect];
-			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
+			int roomSelect = JOptionPane.showOptionDialog(null,"Select a room",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
-			newResident = new Scholarship(firstName,lastName,floor,room);
+			int roomNumber = Integer.parseInt(Integer.toString(floor) + Integer.toString(room));
+			newResident = new Scholarship(firstName,lastName,floor,roomNumber);
 		}else if (studentType.equals("Work Study")){
 			Integer[] floorOptions = {1,2,3};
 			Integer[] roomOptions = {1,2,3,4,5,6,7,8,9};
 			int floorSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,floorOptions,null);
 			int floor = floorOptions[floorSelect];
-			int roomSelect = JOptionPane.showOptionDialog(null,"Select a floor",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
+			int roomSelect = JOptionPane.showOptionDialog(null,"Select a room",null,0,JOptionPane.INFORMATION_MESSAGE,null,roomOptions,null);
 			int room = roomOptions[roomSelect];
+			int roomNumber = Integer.parseInt(Integer.toString(floor) + Integer.toString(room));
 			double HoursWorked = Double.parseDouble(JOptionPane.showInputDialog(null, "Monthly Hours Worked"));
-			newResident = new WorkStudy(firstName,lastName,floor,room, HoursWorked);
+			newResident = new WorkStudy(firstName,lastName,floor,roomNumber, HoursWorked);
 		}else{
 			newResident = null;
 		}
@@ -80,10 +83,10 @@ public class Housing {
 		Boolean[] beginOptions = {true, false};
 		//JOptionPane.showMessageDialog(null, Integer.toString(count));
 		if(count == 0){
-			int begin = JOptionPane.showOptionDialog(null, "Welcome to the Dunwoody Housing Application",null,0,0,null, beginPrompt,null);
+			int begin = JOptionPane.showOptionDialog(null, "Welcome to the Dunwoody Housing Application",null,0,JOptionPane.INFORMATION_MESSAGE,null, beginPrompt,null);
 			run = beginOptions[begin];
 		}else {
-			int begin = JOptionPane.showOptionDialog(null, "Would you like to continue?",null,0,0,null, beginPrompt,null);
+			int begin = JOptionPane.showOptionDialog(null, "Would you like to continue?",null,0,JOptionPane.INFORMATION_MESSAGE,null, beginPrompt,null);
 			run = beginOptions[begin];
 		}
 		return run;
