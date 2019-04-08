@@ -14,7 +14,7 @@ abstract class Resident {
         this.floorNumber = Floor;
         this. roomNumber = Room;
     }
-    public String toString(){
+    public String OutputFormatter(){
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         return String.format("|%-20s","ID Number: " + ID_Number) +
                 String.format("|%-30s","Student Type: " + studentType) + String.format("|%-26s","First Name: " + firstName) +

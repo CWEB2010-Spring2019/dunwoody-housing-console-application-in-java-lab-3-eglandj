@@ -31,7 +31,7 @@ public class Housing {
 			List<Resident> stdnts = groupedStudents.get(studentType);
 			for (Resident n : stdnts) {
 
-				System.out.println(n.toString());
+				System.out.println(n.OutputFormatter());
 			}
 		}
 	}
